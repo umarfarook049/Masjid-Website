@@ -18,14 +18,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css"> 
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen"> 
 	<link rel="stylesheet" href="assets/css/style.css">
-    <link rel='stylesheet' id='camera-css'  href='assets/css/camera.css' type='text/css' media='all'> 
+    <link rel='stylesheet' id='camera-css'  href='assets/css/camera.css' type='text/css' media='all'>
+    <link rel="stylesheet" href="assets/css/NamazTimeforHome.css">
+    <link rel="stylesheet" href="./assets/css/Donation.css">
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 	<script src="assets/js/html5shiv.js"></script>
 	<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body>
+<body onload="getLocation()">
 	<!-- Fixed navbar -->
 	<div class="navbar navbar-inverse">
 		<div class="container">
@@ -63,6 +65,54 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div><!-- .fluid_container -->
 		</div>
 	</header>
+
+            <!-- Namaz Timings  -->
+    
+    <div class="cont">
+        <h1>Namaz Timings</h1>
+        <input type="text" id="locationInput" placeholder="Enter location">
+        <button onclick="getTimings()">Get Timings</button>
+        <button onclick="getLocation()">Current Location</button>
+        <div class="timings-wrapper">
+            <div class="timings" id="timings"></div>
+        </div>
+        <img src="./assets/images/masjid img2.jpg" alt="Mosque" class="mosque-image">
+    </div>
+    
+
+    <!-- donations section  -->
+    
+    <div class="contd">
+        <main>
+            <h1>Donations</h1>
+            <div class="info-section">
+                <p class="info-text">
+                    <b>"Whatever you 'believers' spend in charity, it is for your own good-as long as you do so seeking the pleasure of Allah."</b>
+                </p>
+            </div>
+            <div class="donation-section">
+                <div class="donor-list">
+                    <h2>Recent Donors</h2>
+                    <div class="donor-list-wrapper">
+                        <ul id="donors">
+                            <!-- Donor names will be added here -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="qr-code-section">
+                    <h2>Scan QR Code to Donate</h2>
+                    <img src="./assets/images/Donation imgs/QR code.jpg" alt="QR Code" class="qr-code" width="100px" height="100px"><br>
+                    <div class="inp">
+                        <input type="text" id="donor-name" placeholder="Enter your name">
+                        <input type="number" id="donor-amount" placeholder="Enter donation amount">
+                        <button onclick="addDonor()">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+
 	<!-- /Header --><section class="secpadding">
     <div class="container">
         <div class="row">
@@ -236,6 +286,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 		});
 	</script>
+    <!-- donation script  -->
     
+    <script src="./assets/js/Donation.js"></script>
+	<script src="assets/js/custom.js"></script>
+    <script src="assets/js/NamazTimingsJs.js"></script>
 </body>
 </html>

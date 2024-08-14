@@ -1,25 +1,12 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-}
 
-.cont {
+.contd {
     width: 100%;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
 }
 
-header {
-    background-color: #565353;
-    padding: 10px 0;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-}
+
 
 .header-content {
     display: flex;
@@ -92,6 +79,8 @@ header {
     padding: 10px;
     border-bottom: 1px solid #ddd;
     background: #f9f9f9;
+    display: flex;
+    justify-content: center;
 }
 
 ul {
